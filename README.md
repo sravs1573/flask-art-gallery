@@ -11,13 +11,13 @@ This is a Flask-based web application developed to manage and showcase a collect
 
  2. Project Structure
 
-project-root/
-│
-├── app.py # Main Python file (Flask backend)
-├── templates/ # HTML templates
-├── static/ # Static files like CSS/images
-├── scripts/ # JavaScript files
-└── README.md # Project overview
+project-root
+
+ app.py -Main Python file (Flask backend)
+ templates  - HTML templates
+ static -  Static files like CSS/images
+scripts - JavaScript files
+README.md - Project overview
 
 3.Technologies Used
 
