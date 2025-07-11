@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bbb01d58cc.js" crossorigin="anonymous"></script>
+<style>
+  body{
+        background-image: url('https://cdn3d.iconscout.com/3d/premium/thumb/photo-gallery-5175045-4334319.png');
+        height: 100vh;
+        background-size: cover;
+        }
+
+.bton{
+background-color: #4CAF50; 
+border: none;
+border-radius: 10%;
+color: black;
+padding: 10px;
+text-align: center;
+position: absolute;
+right:5px;
+
+/*display: inline-block;*/
+font-size: 25px;
+margin-top:none;
+
+cursor: pointer;
+color:white;
+
+}
+body{
+background-color: beige;
+}
+.explorecards{
+background-color: white;
+}
+.btn:hover{
+color: black;
+background-color: aliceblue;
+font-weight: bold;
+border-color: black;
+}
+/* .col-12{
+background-color: rgb(228, 228, 92);
+}*/
+
+
+</style>
+    
+</head>
+<body>
+  <form method="POST">
+    <div>
+      <!-- <center><h2>Added items <a href="{{url_for('dashboard')}}"> <button style="float:right" class="bton">Back</button></a> </h2></center> -->
+
+   
+    
+       <div class="bgcolor3 pt-2 pb-2 "><!--pt means padding top-->
+          <div class="container">
+            <div class="row">
+            {% for i in items %}         
+              <div class="col-12 col-mb-6 col-lg-3">
+                <div class="explorecards shadow p-2 mb-2">
+                    <img src="{{url_for('static',filename=i[0]+'.jpg')}}" height="200" width="200" class="exploreimage w-100"/>
+                    <div>
+                  {{i[2]}}<br><br>
+                  <a href="{{url_for('deleteitem',itemid=i[0])}}" class="btn btn-info ">delete</a>
+                  <a href="{{url_for('move',itemid=i[0])}}" class="btn btn-info ">Move to</a>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+    
+    
+            </div>
+            </div>
+            </div> 
+
+          </form>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/00b1661ff0.js" crossorigin="anonymous"></script>   
+</body>
+</html>   
+

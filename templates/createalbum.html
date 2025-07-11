@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    background-image: url('https://img.freepik.com/vecteurs-premium/fichiers-images-photo-application-mobile-stockage-images-service-ligne-pour-telephone-logiciel-galerie-albums-photographie-numerique-web-pour-dessin-anime-pour-smartphone_212005-204.jpg?w=360');
+    height: 100vh;
+    background-size: cover;
+    }
+
+</style>
+<body>
+    <form method="POST">
+        <center>
+        <input type="text" name="name">
+        <button>Submit</button><br><br>
+    {% for i in items %}
+    {{i[0]}}<br>
+    <br>
+    {% endfor %}
+    </center>
+    </form>
+</body>
+</html>

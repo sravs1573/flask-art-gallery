@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        body {
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/325/556/25/blue-abstract-black-wave-streak-wallpaper-preview.jpg');
+            background-size: cover;
+
+        }
+        .btnstyle {
+            background-color:skyblue;
+            color:black;
+            padding:20px;
+            border-radius: 8px;
+            border:none;
+            font-size: 25px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .student {
+            margin-top:23%; 
+            color:azure;
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+   <center><b>{{ message }}</b></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <div class="student">
+    <center><h1>Gallery</h1></center>
+    </div>
+    <div style="text-align:center;">
+    <a href="{{url_for('register')}}"><button class="btnstyle">Register</button></a>
+    <a href="{{url_for('login')}}"><button class="btnstyle">Login</button></a>
+
+    </div>
+</body>
+</html>

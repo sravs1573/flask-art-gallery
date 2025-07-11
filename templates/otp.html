@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>otpvalidation</title>
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+        .container1{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        height: 5vh;
+        color: rgb(255, 150, 12);
+        
+        }
+        body{
+          background-image: url('https://i.pinimg.com/564x/66/2f/94/662f94f29bfc47493d3efe2fde8ff927.jpg');
+          background-repeat: no-repeat;
+          background-size: cover;
+    
+          /*background-color: bisque;*/
+        }
+        .form1{
+        margin-top: 40%;
+        height: 30vh;
+        width: 30%;
+        background-color:rgba(14, 14, 14, 0.5);/*rgba(0,0,0,0.5);rgba(41, 39, 39, 0.3);*/
+        /*box-shadow:5px 30px rgb(175, 201, 164);*/
+        }
+        .forminput input{
+        /*border: none;*/
+        width: 90%;
+        
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        
+        color: rgb(14, 14, 13);
+      }
+      input:focus {
+        outline: none;
+        border-bottom: 2px solid rgb(215, 44, 73);
+        font-size: 17px;
+        font-weight: bold;
+        color: rgb(244, 160, 160);
+      }
+      button{
+        margin-left: 40%;
+        padding: 3%;
+        font-size: large;
+      }
+      .forminput{
+        display: flex;
+        justify-content: center;
+      }
+      button:hover{
+        background-color: aqua;
+        font-weight: bold;
+      }
+      </style>
+</head>
+<body>
+   
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <li><b>{{ message }}</li></b>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+  <div class="container1">
+    <div class="form1">
+    <form method="POST" action="{{url_for('otp',otp=otp,name=name,email=email,password=password,gender=gender)}}">
+    <center><h1 style="color:aliceblue">Enter OTP</h1> </center>
+    
+    <div class="forminput">
+    <input type="text" placeholder="enter otp" name="otp" required/>
+    </div>
+    <button class="btn btn-primary">submit</button>
+    </div>
+    </form>
+    </div>
+    </div>
+</body>
+</html>

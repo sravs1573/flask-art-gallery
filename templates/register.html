@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="code56.css">
+    <script src="https://kit.fontawesome.com/991222c12e.js" crossorigin="anonymous"></script>
+
+	<style>
+        body{
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/325/556/25/blue-abstract-black-wave-streak-wallpaper-preview.jpg');
+            background-size: cover;
+
+        }
+
+       
+        body{
+            color: #fff;
+        }
+		form {
+			background:transparent;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			width: 400px;
+			margin: 50px auto;
+            backdrop-filter:blur(5px);
+		}
+        .login-box {
+    margin-left: 31%;
+    width:600px;
+    height:600px;
+    background:transparent;
+    border:2px solid rgba(255,255,255,255);
+    border-radius: 20px;
+    backdrop-filter:blur(5px);
+}
+		h2 {
+			margin-top: 0;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="email"],
+		input[type="password"],
+        input[type="name"],
+        input[type="gender"] {
+			width: 100%;
+            color:white;
+			padding: 10px;
+			border-radius: 3px;
+			border: 1px solid #ccc;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+			font-size: 16px;
+            background: transparent;
+		}
+		button[type="submit"] {
+			background-color:blue;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 3px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		button[type="submit"]:hover {
+			background-color:cadetblue;
+		}
+       
+    </style>
+</head>
+<body>
+    <div style="margin-right:15%; margin-top:8%;"></div>
+    <div class="login-box">
+    <form method="POST">
+        <h2 class="head1">Sign Up</h2>
+		<label class="head2">Name</label>
+		<input type="name" name="name" required>
+        <label class="head2">Email</label>
+		<input type="email" name="email" required>
+		<label class="head2">Password</label>
+		<input type="password" name="password" required>
+        <label class="head2">Gender</label>
+		<input type="gender" name="gender" required>
+        <button type="submit">Sign Up</button>
+		<p class="head3">Already have an account?   <a href="{{url_for('login')}}">Login</a></p>
+	</form>
+</body>
+</html>
